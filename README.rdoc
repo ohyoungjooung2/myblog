@@ -26,11 +26,7 @@
 
 #Env is ubuntu14.04 apache and mysql.
 
-
-        whatsup@whatsup-To-be-filled-by-O-E-M ~/ror/blog $ apache2 -v
-        Server version: Apache/2.4.7 (Ubuntu)
-        Server built:   Mar 10 2015 13:05:59
-    
+  
     
          root@ts2:~# apt-get install libmysqlclient-dev
          root@ts2:~# sudo apt-get install nodejs
