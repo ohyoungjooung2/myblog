@@ -104,52 +104,7 @@
 
 
 #No error..
-
-
-
-
-#Passenger install. May need root account.
-
-       $ gem install passenger --version 4.0.8
-       $ passenger-install-apache2-module
-
-#Apache virtual host(root)
-
-        hostname sites-enabled # pwd
-       /etc/apache2/sites-enabled
-
-
-#Domain name to /etc/hosts
-
-        hostname sites-enabled # vi /etc/hosts
-        127.0.0.1       localhost ror.com unicorn myblog.oyj
-        
-        hostname sites-enabled # vi 003-myblog.conf 
-        <VirtualHost *:80>
-                ServerName myblog.oyj
-                RailsEnv production
-                #RailsEnv development
-        
-                ServerAdmin webmaster@localhost
-                DocumentRoot /home/whatsup/rails_root/myblog/public
-        
-                LoadModule passenger_module /home/whatsup/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/passenger-5.0.9/buildout/apache2/mod_passenger.so
-               <IfModule mod_passenger.c>
-                  PassengerRoot /home/whatsup/rubies/ruby-2.2.2/lib/ruby/gems/2.2.0/gems/passenger-5.0.9
-                  PassengerDefaultRuby /home/whatsup/rubies/ruby-2.2.2/bin/ruby
-              </IfModule>
-       
-               #LogLevel debug ssl:warn
-               LogLevel warn
-               #LogLevel debug 
-               ErrorLog ${APACHE_LOG_DIR}/error-myblog.log
-               CustomLog ${APACHE_LOG_DIR}/access-myblog.log combined
-              <Directory /home/whatsup/rails_root/myblog/public/>
-               AllowOverride all
-               Options -MultiViews
-               Require all granted
-              </Directory>
-       </VirtualHost>
+     
 
 
 #Production solr edit.
