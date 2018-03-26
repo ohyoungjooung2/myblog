@@ -57,7 +57,7 @@ gem 'sunspot_solr', group: :production
 gem 'unicorn'
 
 # 
-gem 'capistrano', '~> 3.4.0'
+#gem 'capistrano', '~> 3.4.0'
 gem 'rvm-capistrano', group: :development
 
 #bootstrap-sass
