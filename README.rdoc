@@ -154,8 +154,30 @@ https://github.com/ohyoungjooung2/myblog/wiki
         
         mysql> FLUSH PRIVILEGES;
         Query OK, 0 rows affected (0.00 sec)
-        
-        
+        --When Korean or japanese character do not insert into table, it might be a character set problem--
+        --then convert into utf8 char set like belows--
+        mysql> desc articles;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| id           | int(11)      | NO   | PRI | NULL    | auto_increment |
+| title        | varchar(255) | YES  |     | NULL    |                |
+| body         | text         | YES  |     | NULL    |                |
+| published_at | datetime     | YES  |     | NULL    |                |
+| created_at   | datetime     | YES  |     | NULL    |                |
+| updated_at   | datetime     | YES  |     | NULL    |                |
+| excerpt      | varchar(255) | YES  |     | NULL    |                |
+| location     | varchar(255) | YES  |     | NULL    |                |
+| user_id      | int(11)      | YES  |     | NULL    |                |
+| slug         | varchar(255) | YES  |     | NULL    |                |
+| category_id  | int(11)      | YES  |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+11 rows in set (0.00 sec)
+
+mysql> alter table articles CONVERT TO CHARACTER SET utf8;
+Query OK, 4 rows affected (0.05 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
         
         
         whatsup@hostname ~/rails_root/myblog $ vi config/database.yml 
