@@ -61,7 +61,7 @@ gem 'unicorn'
 gem 'rvm-capistrano', group: :development
 
 #bootstrap-sass
-gem 'bootstrap-sass', '~> 3.1.1'
+gem 'bootstrap-sass'
 
 #ace editor
 #gem 'jquery-ace-rails'
