@@ -1,19 +1,19 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
+gem 'rails', '4.2.10'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
 
 # Use SCSS for stylesheets
-gem 'sass-rails'
+gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier'
+gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails'
+gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -25,7 +25,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder'
+gem 'jbuilder', '~> 1.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -33,10 +33,10 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Friendly_id
-gem 'friendly_id'
+gem 'friendly_id','~> 5.1.0'
 
 #tinymce
 gem 'tinymce-rails'
@@ -57,11 +57,11 @@ gem 'sunspot_solr', group: :production
 gem 'unicorn'
 
 # 
-#gem 'capistrano', '~> 3.4.0'
+gem 'capistrano', '~> 3.4.0'
 gem 'rvm-capistrano', group: :development
 
 #bootstrap-sass
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.1.1'
 
 #ace editor
 #gem 'jquery-ace-rails'
